@@ -791,7 +791,7 @@ open class BarLineChartViewBase: ChartViewBase, BarLineScatterCandleBubbleChartD
                 
                 _isDragging = false
                 
-                delegate?.chartViewDidEndPanning?(self)
+                
             }
             
             if _outerScrollView !== nil
@@ -873,8 +873,8 @@ open class BarLineChartViewBase: ChartViewBase, BarLineScatterCandleBubbleChartD
         
         _decelerationLastTime = currentTime
         
-        if abs(_decelerationVelocity.x) < 0.001 && abs(_decelerationVelocity.y) < 0.001
-        {
+        if abs(_decelerationVelocity.x) < 0.003 && abs(_decelerationVelocity.y) < 0.003
+        {   delegate?.chartViewDidEndPanning?(self)
             stopDeceleration()
             
             // Range might have changed, which means that Y-axis labels could have changed in size, affecting Y-axis size. So we need to recalculate offsets.
