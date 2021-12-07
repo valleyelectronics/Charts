@@ -873,7 +873,7 @@ open class BarLineChartViewBase: ChartViewBase, BarLineScatterCandleBubbleChartD
         
         _decelerationLastTime = currentTime
         
-        if abs(_decelerationVelocity.x) < 0.005 && abs(_decelerationVelocity.y) < 0.005
+        if abs(_decelerationVelocity.x) < 2 && abs(_decelerationVelocity.y) < 2
         {   delegate?.chartViewDidEndPanning?(self)
             stopDeceleration()
             
