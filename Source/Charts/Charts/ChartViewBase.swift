@@ -45,6 +45,9 @@ public protocol ChartViewDelegate
 
     // Callbacks when Animator stops animating
     @objc optional func chartView(_ chartView: ChartViewBase, animatorDidStop animator: Animator)
+    
+    // Callbacks when a new value is in the center of the chart
+    @objc optional func chartViewHasNewCenterValue(_ chartView: ChartViewBase, xCoordinate: Double)
 }
 
 open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
