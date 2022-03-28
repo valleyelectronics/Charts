@@ -942,10 +942,13 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
         _viewportJobs.removeAll(keepingCapacity: false)
     }
     
+    var currentJob: ViewPortJob?
+    
     @objc open func addViewportJob(_ job: ViewPortJob)
     {
         if _viewPortHandler.hasChartDimens
         {
+            currentJob = job
             job.doJob()
         }
         else

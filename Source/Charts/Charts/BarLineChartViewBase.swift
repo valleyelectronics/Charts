@@ -1983,3 +1983,4 @@ open class BarLineChartViewBase: ChartViewBase, BarLineScatterCandleBubbleChartD
         return min(xAxis._axisMaximum, Double(pt.x))
     }
 }
+
