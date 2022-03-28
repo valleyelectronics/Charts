@@ -901,7 +901,7 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
         return true
     }
     
-    internal var _viewportJobs = [ViewPortJob]()
+    var _viewportJobs = [ViewPortJob]()
     
     open override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?)
     {
