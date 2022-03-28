@@ -942,7 +942,7 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
         _viewportJobs.removeAll(keepingCapacity: false)
     }
     
-    var currentJob: ViewPortJob?
+    open var currentJob: ViewPortJob?
     
     @objc open func addViewportJob(_ job: ViewPortJob)
     {
